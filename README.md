@@ -1,6 +1,6 @@
 # ParkingSystem
 
-Funktion: (elektrische) Parkplätze von Garagen, aus einer Datei herausgelesen oder selbst hinzugefügt, verwalten. 
+**Funktion**: (elektrische) Parkplätze von Garagen, aus einer Datei herausgelesen oder selbst hinzugefügt, verwalten. 
 Das Kennzeichen der Fahrzeuge wird in den Garagen abgespeichert und von Bildern abgelesen. 
 
 ## Installation
@@ -56,7 +56,7 @@ Das neue Bild kommt dann in die detect_plate(img, text='') function. Der Output 
 Danach kommt das Kennzeichen Bild in die segment_characters(image) function. Der Output ist eine Liste von allen Buchstaben und Zahlen gefunden als Bild.  
 Wenn das Model schon trainiert ist, können wir schon die show_results() function aufrufen. Als Output bekommen wir das Kennzeichen als string geliefert.  
 
-### functions:
+### Functions:
     detect_plate(img, text=''): sucht nach dem Kennzeichen im Bild (img) und gibt das Bild mit den markierten Kennzeichen und ausgeschnittenen Kennzeichen zurück
     display(img, text=''): Bild (img) anzeigen lassen, Text kann hinzugefügt werden
     find_contours(dimensions, img): Markiert alle Zahlen und Buchstaben im Bild mit einen blauen Rechteck
@@ -65,6 +65,6 @@ Wenn das Model schon trainiert ist, können wir schon die show_results() functio
     fix_dimensions(img): Bild anpassen, dass es 28x28 groß ist
     show_results(): nimmt jedes Bild in der Liste (von segment_characters()) und schreibt die Zahl/Buchstabe vom Bild
 
-### classes:
+### Classes:
     stop_training_callback(tf.keras.callbacks.Callback): diese Klasse wird beim Model Training benutzt.
     Es wird solange trainiert bis es einen bestimmten f1score (0.999) hat.
